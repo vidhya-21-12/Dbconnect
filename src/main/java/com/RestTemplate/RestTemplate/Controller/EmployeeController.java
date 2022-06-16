@@ -19,8 +19,6 @@ public class EmployeeController {
         BaseResponse response = employeeService.processLogin(req);
         return ResponseEntity.ok(response);
     }
-
-
     @PostMapping(value = NamespaceConstant.CREATE_EMPLOYEE)
     public ResponseEntity<BaseResponse> processSignup(@RequestBody EmployeeDto req) throws Exception {
         BaseResponse response = employeeService.processCreate(req);
